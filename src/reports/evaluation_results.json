@@ -1,0 +1,58 @@
+{
+  "timestamp": "2026-05-04 01:41:24",
+  "samples_evaluated": 200,
+  "avg_bleu": 0.0153,
+  "avg_perplexity": 196.46,
+  "sample_predictions": [
+    {
+      "input": "that sounds dangerous. is it worth doing such a dangerous job?",
+      "expected": "wekk it is okay is you are well trained. there are three levels apprentice, journeyman and master.",
+      "predicted": "yes but sometimes you have to do it for the money"
+    },
+    {
+      "input": "wekk it is okay is you are well trained. there are three levels apprentice, journeyman and master.",
+      "expected": "which level are you at?",
+      "predicted": "i like to be a master in the world of video games. i'm a master of making and teaching myself to play video games."
+    },
+    {
+      "input": "which level are you at?",
+      "expected": "i received onthejob training when i first started",
+      "predicted": "i have been playing since my 6th grade"
+    },
+    {
+      "input": "i received onthejob training when i first started",
+      "expected": "thats great! how long have you been doing this work?",
+      "predicted": "i did get a job in a local university"
+    },
+    {
+      "input": "thats great! how long have you been doing this work?",
+      "expected": "for a good number of years now.",
+      "predicted": "i'm a teacher at a private school"
+    },
+    {
+      "input": "for a good number of years now.",
+      "expected": "sounds like it could be a dangerous job at times.",
+      "predicted": "i've had a lot of kids that are not my own kids, so i think i have a lot of time to make them myself."
+    },
+    {
+      "input": "sounds like it could be a dangerous job at times.",
+      "expected": "that it is,especially if you dont take the proper measures",
+      "predicted": "i like my job , but i do have a job that is not very good at the time, so i have no idea how to get around the job"
+    },
+    {
+      "input": "that it is,especially if you dont take the proper measures",
+      "expected": "well you have entered a trade that will always guarantee you some work.",
+      "predicted": "i don't have a lot of money to spend on things like this. i just do my own work and i don't get the extra money"
+    },
+    {
+      "input": "well you have entered a trade that will always guarantee you some work.",
+      "expected": "thats true,especially in this economy",
+      "predicted": "yeah i am a new player so i have no idea how to get there"
+    },
+    {
+      "input": "thats true,especially in this economy",
+      "expected": "i have a pretty stable job myself, but mostly desk work",
+      "predicted": "that's true, but it's a lot of work to get to work on the weekend"
+    }
+  ]
+}
