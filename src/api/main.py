@@ -10,8 +10,10 @@ from datetime import datetime
 import json
 
 BASE_DIR        = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-DIALOG_PATH     = os.path.join(BASE_DIR, "model/checkpoints/finetuned")
-INTENT_PATH     = os.path.join(BASE_DIR, "model/checkpoints/intent_classifier")
+DIALOG_PATH     = os.path.join(BASE_DIR,"..", "model/checkpoints/finetuned")
+DIALOG_PATH     = os.path.abspath(DIALOG_PATH)
+INTENT_PATH     = os.path.join(BASE_DIR, "..", "model/checkpoints/intent_classifier")
+INTENT_PATH     = os.path.abspath(INTENT_PATH)
 LOG_PATH        = os.path.join(BASE_DIR, "reports/conversation_logs.json")
 DEVICE          = "cuda" if torch.cuda.is_available() else "cpu"
 
