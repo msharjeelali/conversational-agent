@@ -1,0 +1,26 @@
+# model_links.txt
+Model checkpoints are stored on Google Drive due to GitHub file size limits.
+
+Download and place in the following paths:
+
+1. DialoGPT fine-tuned
+   Drive link: https://drive.google.com/drive/folders/1tgVn0gWmkLDjzS8OFby1rBqIu_rDpdgt?usp=drive_link
+   Local path: model/checkpoints/finetuned/
+
+2. Intent classifier
+   Drive link: https://drive.google.com/drive/folders/1Vel-VtcxTGZNq-FBEJdZLUABk9Ut7tP-?usp=drive_link
+   Local path: model/checkpoints/intent_classifier/
+
+After downloading, your model/ directory should look like:
+model/
+└── checkpoints/
+    ├── finetuned/
+    │   ├── config.json
+    │   ├── model.safetensors
+    │   ├── tokenizer.json
+    │   └── tokenizer_config.json
+    └── intent_classifier/
+        ├── config.json
+        ├── model.safetensors
+        ├── tokenizer.json
+        └── tokenizer_config.json

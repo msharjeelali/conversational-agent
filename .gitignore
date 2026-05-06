@@ -216,3 +216,11 @@ __marimo__/
 
 # Streamlit
 .streamlit/secrets.toml
+
+# Model checkpoints (stored on Google Drive)
+model/checkpoints/
+model_two/
+*.safetensors
+*.bin
+*.pt
+*.pth
