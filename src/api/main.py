@@ -1,13 +1,14 @@
 import os
 import sys
 import uuid
+import json
 import torch
+import asyncio
 from fastapi import FastAPI, HTTPException
 from fastapi.middleware.cors import CORSMiddleware
 from pydantic import BaseModel
 from transformers import AutoTokenizer, AutoModelForCausalLM, AutoModelForSequenceClassification
 from datetime import datetime
-import json
 
 BASE_DIR        = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 DIALOG_PATH     = os.path.join(BASE_DIR,"..", "model/checkpoints/finetuned")
@@ -93,15 +94,18 @@ def generate_response(message: str, history: list[str]) -> str:
         context += turn + dialog_tokenizer.eos_token
     context += message + dialog_tokenizer.eos_token
 
-    inp = dialog_tokenizer.encode(context, return_tensors="pt").to(DEVICE)
-
-    if inp.shape[1] > 512:
-        inp = inp[:, -512:]
+    inp_ids = dialog_tokenizer.encode(context)
+    
+    inp_ids = inp_ids[-256:]
+    
+    input_ids      = torch.tensor([inp_ids]).to(DEVICE)
+    attention_mask = torch.ones_like(input_ids).to(DEVICE)
 
     with torch.no_grad():
         out = dialog_model.generate(
-            inp,
-            max_length=inp.shape[1] + 100,
+            input_ids,
+            attention_mask=attention_mask,
+            max_new_tokens=60,
             pad_token_id=dialog_tokenizer.eos_token_id,
             do_sample=True,
             top_p=0.9,
@@ -110,7 +114,7 @@ def generate_response(message: str, history: list[str]) -> str:
         )
 
     response = dialog_tokenizer.decode(
-        out[:, inp.shape[1]:][0], skip_special_tokens=True
+        out[:, input_ids.shape[1]:][0], skip_special_tokens=True
     ).strip()
 
     return response if response else "I am not sure how to respond to that."
@@ -139,7 +143,7 @@ def root():
     return {"status": "running", "message": "Conversational Agent API is live"}
 
 @app.post("/chat", response_model=ChatResponse)
-def chat(req: ChatRequest):
+async def chat(req: ChatRequest):
     if not req.message.strip():
         raise HTTPException(status_code=400, detail="Message cannot be empty")
 
@@ -149,18 +153,32 @@ def chat(req: ChatRequest):
 
     message = req.message.strip().lower()
 
-    intent = predict_intent(message)
+    try:
+        loop   = asyncio.get_event_loop()
+        intent = await asyncio.wait_for(
+            loop.run_in_executor(None, predict_intent, message),
+            timeout=10.0
+        )
 
-    response = None
-    if intent == "question":
-        response = faq_lookup(message)
+        response = None
+        if intent == "question":
+            response = faq_lookup(message)
 
-    if not response:
-        response = generate_response(message, sessions[session_id])
+        if not response:
+            response = await asyncio.wait_for(
+                loop.run_in_executor(None, generate_response, message, sessions[session_id]),
+                timeout=30.0
+            )
+
+    except asyncio.TimeoutError:
+        return ChatResponse(
+            response="Sorry, I am taking too long to respond. Please try again.",
+            intent="inform",
+            session_id=session_id
+        )
 
     sessions[session_id].append(message)
     sessions[session_id].append(response)
-
     log_conversation(session_id, message, response, intent)
 
     return ChatResponse(response=response, intent=intent, session_id=session_id)
