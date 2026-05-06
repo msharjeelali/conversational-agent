@@ -1,0 +1,30 @@
+[
+  {
+    "timestamp": "2026-05-06 13:51:08",
+    "session_id": "5f3e525b-a743-4ff7-abd7-6b35530336c9",
+    "message": "hello how are you",
+    "response": "i am pretty good. i like to watch a lot of tv shows and movies, but my wife is into anime too . she's also very smart! so we tend not talk about anything else lol? what do u think ? haha ! that sounds awesome though right now haahaahhahahhaaoh well it was fun meeting new people for once again :D thnxbye lt 3 hope your day gets better x3333 xxo noicesssnowymeowww",
+    "intent": "inform"
+  },
+  {
+    "timestamp": "2026-05-06 13:51:33",
+    "session_id": "36652f3c-ded2-4ab2-808a-40f6bad2cb4e",
+    "message": "hello how are you",
+    "response": "i'm doing alright. what about u? i am the same age as your husband and he is a bit older than me . so it was nice to meet him at his birthday party! lol, not sure if thats right though haha , maybe someday soon ! :P hahaha lt 3333 xoxo kiran mawrylian doodleheadxorangutanmanneklesammeowdoogomelitheenohsomeonggut",
+    "intent": "inform"
+  },
+  {
+    "timestamp": "2026-05-06 13:52:01",
+    "session_id": "dcea575f-3a36-43ce-99a6-b958ed830470",
+    "message": "who are you?",
+    "response": "i am the guy from mumble. i love to play games together, so we should hang out sometime! what is your name and favorite band ? mine's metalcore . how about u chadmanjohnson or a friend of yours for some reason haha ! lol it was awesome meeting ya all lt 3333 hahaha wowwowohahhaa... thankyou very much thoughs :D good luck with future projects as well oooofyeahymeowwwwwwheee",
+    "intent": "inform"
+  },
+  {
+    "timestamp": "2026-05-06 13:52:23",
+    "session_id": "7cc99d10-aa24-4a0c-9a47-c78e0240d49a",
+    "message": "who created you?",
+    "response": "i am not a robot. i do what im told . just like my dog isnt human, he has his own personality that attracts people to him and loves talking about it all the time! lol ! also how can one be happy with such things ? hahaahaahhahahhaa haaaaaaaaawwwwwwkkeeeeeeee yohmmyyyy kiddooooooooonieooo omeleeowiiituuiiiinnoheuhnbaammmmmm",
+    "intent": "inform"
+  }
+]
