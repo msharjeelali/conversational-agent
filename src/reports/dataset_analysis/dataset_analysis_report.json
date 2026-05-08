@@ -1,0 +1,222 @@
+{
+  "timestamp": "2026-05-09 03:56:27",
+  "num_intents": 9,
+  "intent_classes": [
+    "inform",
+    "question",
+    "directive",
+    "commissive",
+    "greeting",
+    "farewell",
+    "gratitude",
+    "complaint",
+    "confirmation"
+  ],
+  "datasets_analyzed": [
+    "DailyDialog",
+    "CLINC150",
+    "Combined"
+  ],
+  "individual_stats": {
+    "DailyDialog": {
+      "dataset": "DailyDialog",
+      "total_examples": 102979,
+      "unique_texts": 81857,
+      "intent_distribution": {
+        "inform": {
+          "count": 42568,
+          "percentage": 41.34
+        },
+        "question": {
+          "count": 27920,
+          "percentage": 27.11
+        },
+        "directive": {
+          "count": 16335,
+          "percentage": 15.86
+        },
+        "commissive": {
+          "count": 8389,
+          "percentage": 8.15
+        },
+        "greeting": {
+          "count": 2053,
+          "percentage": 1.99
+        },
+        "farewell": {
+          "count": 263,
+          "percentage": 0.26
+        },
+        "gratitude": {
+          "count": 4113,
+          "percentage": 3.99
+        },
+        "complaint": {
+          "count": 0,
+          "percentage": 0.0
+        },
+        "confirmation": {
+          "count": 1338,
+          "percentage": 1.3
+        }
+      },
+      "text_length": {
+        "min_words": 1,
+        "max_words": 278,
+        "avg_words": 13.61,
+        "median_words": 11
+      },
+      "class_balance": {
+        "most_common": "inform",
+        "least_common": "farewell",
+        "imbalance_ratio": 161.86
+      },
+      "sample_examples": {
+        "inform": "sounds great to me ! if they are willing , we could ask them to go dancing with us.that is excellent exercise and fun , too .",
+        "question": "what do you mean ? it will help us to relax .",
+        "directive": "say , jim , how about going for a few beers after dinner ?",
+        "commissive": "you know that is tempting but is really not good for our fitness .",
+        "greeting": "hey john , nice skates . are they new ?",
+        "farewell": "see you then .",
+        "gratitude": "thank you .",
+        "complaint": "N/A",
+        "confirmation": "yeah !"
+      }
+    },
+    "CLINC150": {
+      "dataset": "CLINC150",
+      "total_examples": 18600,
+      "unique_texts": 18596,
+      "intent_distribution": {
+        "inform": {
+          "count": 8250,
+          "percentage": 44.35
+        },
+        "question": {
+          "count": 4350,
+          "percentage": 23.39
+        },
+        "directive": {
+          "count": 4650,
+          "percentage": 25.0
+        },
+        "commissive": {
+          "count": 150,
+          "percentage": 0.81
+        },
+        "greeting": {
+          "count": 150,
+          "percentage": 0.81
+        },
+        "farewell": {
+          "count": 150,
+          "percentage": 0.81
+        },
+        "gratitude": {
+          "count": 150,
+          "percentage": 0.81
+        },
+        "complaint": {
+          "count": 600,
+          "percentage": 3.23
+        },
+        "confirmation": {
+          "count": 150,
+          "percentage": 0.81
+        }
+      },
+      "text_length": {
+        "min_words": 1,
+        "max_words": 26,
+        "avg_words": 8.25,
+        "median_words": 8
+      },
+      "class_balance": {
+        "most_common": "inform",
+        "least_common": "greeting",
+        "imbalance_ratio": 55.0
+      },
+      "sample_examples": {
+        "inform": "i need $20000 transferred from my savings to my checking",
+        "question": "what expression would i use to say i love you if i were an italian",
+        "directive": "please set a 4 minute timer",
+        "commissive": "i don't know the answer",
+        "greeting": "how's everything",
+        "farewell": "syonara, ai device!",
+        "gratitude": "you have been a big help, thank you so much",
+        "complaint": "immediately the credit card company must be told that i lost my card from them",
+        "confirmation": "yep"
+      }
+    }
+  },
+  "combined_stats": {
+    "dataset": "Combined",
+    "total_examples": 100444,
+    "unique_texts": 100444,
+    "intent_distribution": {
+      "inform": {
+        "count": 42869,
+        "percentage": 42.68
+      },
+      "question": {
+        "count": 25628,
+        "percentage": 25.51
+      },
+      "directive": {
+        "count": 18765,
+        "percentage": 18.68
+      },
+      "commissive": {
+        "count": 6457,
+        "percentage": 6.43
+      },
+      "greeting": {
+        "count": 1856,
+        "percentage": 1.85
+      },
+      "farewell": {
+        "count": 233,
+        "percentage": 0.23
+      },
+      "gratitude": {
+        "count": 2818,
+        "percentage": 2.81
+      },
+      "complaint": {
+        "count": 600,
+        "percentage": 0.6
+      },
+      "confirmation": {
+        "count": 1218,
+        "percentage": 1.21
+      }
+    },
+    "text_length": {
+      "min_words": 1,
+      "max_words": 278,
+      "avg_words": 13.25,
+      "median_words": 10
+    },
+    "class_balance": {
+      "most_common": "inform",
+      "least_common": "farewell",
+      "imbalance_ratio": 183.99
+    },
+    "sample_examples": {
+      "inform": "during the weekend i often take the family out on short trips .",
+      "question": "have you got any plans for the coming holiday ?",
+      "directive": "can you turn the volume to 4",
+      "commissive": "that's fine , because if i leave , then your rules won't matter .",
+      "greeting": "hello dr peters . just fine thank you . ricky and i are here for his vaccines .",
+      "farewell": "i enjoyed speaking with you",
+      "gratitude": "so , the quicker i pay it back , the more i can save in interest ? that's excellent . thanks so much for your information . i'll come in shortly to take the relevant steps for the loan .",
+      "complaint": "my card has a burn on it",
+      "confirmation": "yeah , this is my first visit here ."
+    }
+  },
+  "splits": {
+    "train": 80355,
+    "val": 10044,
+    "test": 10045
+  }
+}
