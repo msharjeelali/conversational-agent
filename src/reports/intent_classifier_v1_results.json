@@ -1,0 +1,289 @@
+{
+  "timestamp": "2026-05-08 15:34:02",
+  "classifier_version": "v1_blended_skill_talk",
+  "dataset_used": "blended_skill_talk (imbalanced \u2014 99% inform)",
+  "total_tests": 40,
+  "correct": 29,
+  "accuracy": 0.725,
+  "classification_report": {
+    "inform": {
+      "precision": 0.5,
+      "recall": 1.0,
+      "f1-score": 0.6666666666666666,
+      "support": 10.0
+    },
+    "question": {
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1-score": 0.0,
+      "support": 10.0
+    },
+    "directive": {
+      "precision": 1.0,
+      "recall": 0.9,
+      "f1-score": 0.9473684210526315,
+      "support": 10.0
+    },
+    "commissive": {
+      "precision": 0.9090909090909091,
+      "recall": 1.0,
+      "f1-score": 0.9523809523809523,
+      "support": 10.0
+    },
+    "accuracy": 0.725,
+    "macro avg": {
+      "precision": 0.6022727272727273,
+      "recall": 0.725,
+      "f1-score": 0.6416040100250626,
+      "support": 40.0
+    },
+    "weighted avg": {
+      "precision": 0.6022727272727273,
+      "recall": 0.725,
+      "f1-score": 0.6416040100250626,
+      "support": 40.0
+    }
+  },
+  "per_sample_results": [
+    {
+      "input": "what time does the store close",
+      "expected": "question",
+      "predicted": "inform",
+      "correct": false
+    },
+    {
+      "input": "do you have any siblings",
+      "expected": "question",
+      "predicted": "inform",
+      "correct": false
+    },
+    {
+      "input": "where are you from",
+      "expected": "question",
+      "predicted": "inform",
+      "correct": false
+    },
+    {
+      "input": "how old are you",
+      "expected": "question",
+      "predicted": "inform",
+      "correct": false
+    },
+    {
+      "input": "what is your name",
+      "expected": "question",
+      "predicted": "inform",
+      "correct": false
+    },
+    {
+      "input": "who are you",
+      "expected": "question",
+      "predicted": "inform",
+      "correct": false
+    },
+    {
+      "input": "what do you like to do for fun",
+      "expected": "question",
+      "predicted": "inform",
+      "correct": false
+    },
+    {
+      "input": "have you ever been abroad",
+      "expected": "question",
+      "predicted": "inform",
+      "correct": false
+    },
+    {
+      "input": "what happened next",
+      "expected": "question",
+      "predicted": "inform",
+      "correct": false
+    },
+    {
+      "input": "how does that work",
+      "expected": "question",
+      "predicted": "inform",
+      "correct": false
+    },
+    {
+      "input": "i love spending time with my family",
+      "expected": "inform",
+      "predicted": "inform",
+      "correct": true
+    },
+    {
+      "input": "i have two kids",
+      "expected": "inform",
+      "predicted": "inform",
+      "correct": true
+    },
+    {
+      "input": "i work as a teacher",
+      "expected": "inform",
+      "predicted": "inform",
+      "correct": true
+    },
+    {
+      "input": "i live in lahore",
+      "expected": "inform",
+      "predicted": "inform",
+      "correct": true
+    },
+    {
+      "input": "i enjoy reading books",
+      "expected": "inform",
+      "predicted": "inform",
+      "correct": true
+    },
+    {
+      "input": "i studied computer science",
+      "expected": "inform",
+      "predicted": "inform",
+      "correct": true
+    },
+    {
+      "input": "i like to cook at home",
+      "expected": "inform",
+      "predicted": "inform",
+      "correct": true
+    },
+    {
+      "input": "i moved here last year",
+      "expected": "inform",
+      "predicted": "inform",
+      "correct": true
+    },
+    {
+      "input": "i enjoy watching movies",
+      "expected": "inform",
+      "predicted": "inform",
+      "correct": true
+    },
+    {
+      "input": "i have a dog named max",
+      "expected": "inform",
+      "predicted": "inform",
+      "correct": true
+    },
+    {
+      "input": "please send me the report by tomorrow",
+      "expected": "directive",
+      "predicted": "directive",
+      "correct": true
+    },
+    {
+      "input": "can you help me with this",
+      "expected": "directive",
+      "predicted": "directive",
+      "correct": true
+    },
+    {
+      "input": "stop doing that",
+      "expected": "directive",
+      "predicted": "directive",
+      "correct": true
+    },
+    {
+      "input": "tell me what happened",
+      "expected": "directive",
+      "predicted": "directive",
+      "correct": true
+    },
+    {
+      "input": "remind me tomorrow",
+      "expected": "directive",
+      "predicted": "directive",
+      "correct": true
+    },
+    {
+      "input": "show me how to do it",
+      "expected": "directive",
+      "predicted": "directive",
+      "correct": true
+    },
+    {
+      "input": "help me understand this",
+      "expected": "directive",
+      "predicted": "directive",
+      "correct": true
+    },
+    {
+      "input": "make sure you finish it today",
+      "expected": "directive",
+      "predicted": "commissive",
+      "correct": false
+    },
+    {
+      "input": "close the door please",
+      "expected": "directive",
+      "predicted": "directive",
+      "correct": true
+    },
+    {
+      "input": "send it over when ready",
+      "expected": "directive",
+      "predicted": "directive",
+      "correct": true
+    },
+    {
+      "input": "i will get that done for you",
+      "expected": "commissive",
+      "predicted": "commissive",
+      "correct": true
+    },
+    {
+      "input": "i promise to call you",
+      "expected": "commissive",
+      "predicted": "commissive",
+      "correct": true
+    },
+    {
+      "input": "i am going to finish it today",
+      "expected": "commissive",
+      "predicted": "commissive",
+      "correct": true
+    },
+    {
+      "input": "i will make sure it happens",
+      "expected": "commissive",
+      "predicted": "commissive",
+      "correct": true
+    },
+    {
+      "input": "i plan to visit next week",
+      "expected": "commissive",
+      "predicted": "commissive",
+      "correct": true
+    },
+    {
+      "input": "i will take care of it",
+      "expected": "commissive",
+      "predicted": "commissive",
+      "correct": true
+    },
+    {
+      "input": "i intend to fix this",
+      "expected": "commissive",
+      "predicted": "commissive",
+      "correct": true
+    },
+    {
+      "input": "i will be there on time",
+      "expected": "commissive",
+      "predicted": "commissive",
+      "correct": true
+    },
+    {
+      "input": "i promise to do better",
+      "expected": "commissive",
+      "predicted": "commissive",
+      "correct": true
+    },
+    {
+      "input": "i am going to finish this project today",
+      "expected": "commissive",
+      "predicted": "commissive",
+      "correct": true
+    }
+  ]
+}
