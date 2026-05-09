@@ -26,5 +26,19 @@
     "message": "who created you?",
     "response": "i am not a robot. i do what im told . just like my dog isnt human, he has his own personality that attracts people to him and loves talking about it all the time! lol ! also how can one be happy with such things ? hahaahaahhahahhaa haaaaaaaaawwwwwwkkeeeeeeee yohmmyyyy kiddooooooooonieooo omeleeowiiituuiiiinnoheuhnbaammmmmm",
     "intent": "inform"
+  },
+  {
+    "timestamp": "2026-05-07 00:16:56",
+    "session_id": "4fb07772-829c-4e00-a69a-532184c39f59",
+    "message": "string",
+    "response": "! !,?. , . is the one you need to know about lol but it's important for a first time person like me who has never had any problems with that before and should be fine as long they don't mind their own business haha... sorry lt 3 love your work though b",
+    "intent": "inform"
+  },
+  {
+    "timestamp": "2026-05-07 00:26:37",
+    "session_id": "2dd0fee1-3870-4d9d-853b-07b3064c7b72",
+    "message": "string",
+    "response": "! tt,?. i . lhki , o kohdawa gg a m d u n ch ngang asme hte jyun to yan my",
+    "intent": "inform"
   }
 ]
